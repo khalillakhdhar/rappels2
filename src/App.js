@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { Routes,Link,Route } from 'react-router-dom';
+import Reactpage from './pages/Reactpage';
+import Nodepage from './pages/Nodepage';
+import { Mongoosepage } from './pages/Mongoosepage';
+import { Navbar } from './pages/layout/Navbar';
+import MyForm from './pages/MyForm';
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar></Navbar>
+    <Routes>
+      <Route path="/" element={<Reactpage/>}/>
+      <Route path="/node" element={<Nodepage></Nodepage>}/>
+      <Route path="/mongoose" element={<Mongoosepage/>}></Route>
+      <Route path="/form" element={<MyForm/>}></Route>
+
+
+
+    </Routes>
+    </>
   );
 }
-
-export default App;
