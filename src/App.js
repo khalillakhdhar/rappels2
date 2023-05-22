@@ -5,6 +5,7 @@ import Nodepage from './pages/Nodepage';
 import { Mongoosepage } from './pages/Mongoosepage';
 import { Navbar } from './pages/layout/Navbar';
 import MyForm from './pages/MyForm';
+import Imc from './pages/Imc';
 export default function App() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function App() {
       <Route path="/node" element={<Nodepage></Nodepage>}/>
       <Route path="/mongoose" element={<Mongoosepage/>}></Route>
       <Route path="/form" element={<MyForm/>}></Route>
+      <Route path="/indice" element={<Imc/>}></Route>
 
 
 
